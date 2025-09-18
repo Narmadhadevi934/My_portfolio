@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microblogging App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      color: #ff6347;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    #new-post {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #post-content {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #post-button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #post-button:hover {
+      background-color: #e5533d;
+    }
+    #posts {
+      margin-top: 20px;
+    }
+    #post-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .post {
+      background-color: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .post p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    .delete-btn {
+      background-color: #ff6347;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+    .delete-btn:hover {
+      background-color: #e5533d;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Microblogging App</h1>
+      <p>Share your thoughts in a few words!</p>
+    </header>
+
+    <section id="new-post">
+      <textarea id="post-content" placeholder="What's on your mind?" rows="4"></textarea>
+      <button id="post-button">Post</button>
+    </section>
+
+    <section id="posts">
+      <h2>Recent Posts</h2>
+      <div id="post-list"></div>
+    </section>
+  </div>
+
+  <script>
+    document.getElementById('post-button').addEventListener('click', function() {
+      const content = document.getElementById('post-content').value.trim();
+      if (content) {
+        addPost(content);
+        document.getElementById('post-content').value = '';
+      }
+    });
+
+    function addPost(content) {
+      const postList = document.getElementById('post-list');
+      const postDiv = document.createElement('div');
+      postDiv.classList.add('post');
+
+      const postText = document.createElement('p');
+      postText.textContent = content;
+      postDiv.appendChild(postText);
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.textContent = 'Delete';
+      deleteBtn.classList.add('delete-btn');
+      deleteBtn.addEventListener('click', function() {
+        postDiv.remove();
+      });
+      postDiv.appendChild(deleteBtn);
+
+      postList.appendChild(postDiv);
+    }
+  </script>
+</body>
+</html>
