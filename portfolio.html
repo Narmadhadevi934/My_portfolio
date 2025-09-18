@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narmadhadevi M's Portfolio</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #87CEEB; /* Sky Blue Background */
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      color: #ffcc00; /* Yellow Links */
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* Main Section */
+    main {
+      padding: 40px 10%;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      font-size: 2rem;
+      color: #ffcc00; /* Yellow Headings */
+      margin-bottom: 10px;
+    }
+    section p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Skills & Projects */
+    .skills, .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .skill, .project {
+      background: #ffcc00; /* Yellow Background for Divs */
+      padding: 20px;
+      border-radius: 8px;
+      width: calc(33.333% - 20px);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skill:hover, .project:hover {
+      transform: translateY(-10px);
+    }
+    .skill h3, .project h3 {
+      color: #1e1e1e;
+      margin-bottom: 10px;
+    }
+    .skill p, .project p {
+      color: #333;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      color: #333;
+    }
+    button {
+      padding: 10px;
+      background: #ffcc00;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+    button:hover {
+      background: #e6b800;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e1e1e;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .skills, .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+      .skill, .project {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Narmadhadevi M</h1>
+  <p>Web Developer | Designer | Innovator</p>
+</header>
+
+<main>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Narmadhadevi M, a passionate web developer and designer with a keen interest in creating intuitive and visually appealing digital experiences. I specialize in HTML, CSS, JavaScript, and modern web frameworks.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">
+        <h3>HTML</h3>
+        <p>Building the structure of web pages with semantic HTML5.</p>
+      </div>
+      <div class="skill">
+        <h3>CSS</h3>
+        <p>Styling web pages with modern CSS techniques and frameworks.</p>
+      </div>
+      <div class="skill">
+        <h3>JavaScript</h3>
+        <p>Adding interactivity and dynamic behavior to web pages.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio showcasing my skills and projects.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Name:Narmadhadevi M</p>
+    <p>Email: <a href="mailto:narmadhadevim934@gmail.com">narmadhadevim934@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/narmadha-devi-048181303" target="_blank">view profile</a></p>
+    <p>GitHub: <a href="https://github.com/Narmadhadevi934" target="_blank">view projects</a></p>
+    
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Narmadhadevi M. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
